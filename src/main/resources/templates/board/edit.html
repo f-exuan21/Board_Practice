@@ -24,8 +24,8 @@
         </tr>
         <tr>
             <th>비밀번호</th>
-            <td><input type="password" id="pwd" name="pwd"></td>
-            <td th:text="${msg}"></td>
+            <td><input type="password" id="pwd" name="pwd" required="required"></td>
+            <td th:if="${msg != null}" th:text="${msg}"></td>
         </tr>
     </table>
     <div>

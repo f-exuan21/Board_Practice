@@ -2,10 +2,7 @@ package com.hyeon.mvc.board.domain;
 
 import org.apache.ibatis.type.Alias;
 
-import javax.validation.constraints.Digits;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.Size;
+import javax.validation.constraints.*;
 import java.sql.Timestamp;
 
 @Alias("boardVO")
@@ -22,6 +19,7 @@ public class BoardVO {
     @NotBlank(message="작성자를 입력하세요.")
     private String writer;
 
+    @NotNull(message="비밀번호를 입력하세요.")
     private int password;
 
     private Timestamp regDate;
